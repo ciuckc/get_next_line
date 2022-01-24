@@ -6,7 +6,7 @@
 /*   By: scristia <scristia@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/13 18:44:51 by scristia      #+#    #+#                 */
-/*   Updated: 2022/01/15 12:38:12 by scristia      ########   odam.nl         */
+/*   Updated: 2022/01/23 18:56:03 by scristia      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
 
 # define TRUE 1
+# define FALSE 0
 
 char	*get_next_line(int fd);
 

@@ -6,7 +6,7 @@
 /*   By: scristia <scristia@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/01/13 18:45:50 by scristia      #+#    #+#                 */
-/*   Updated: 2022/01/15 12:46:41 by scristia      ########   odam.nl         */
+/*   Updated: 2022/01/23 18:56:05 by scristia      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,20 +63,18 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len_s1;
 	size_t	len_s2;
 
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	if (s1 == NULL)
-		return (ft_strdup(s2));
-	if (s2 == NULL)
-		return (ft_strdup(s1));
 	len_s1 = ft_len_to_char(s1, '\0');
 	len_s2 = ft_len_to_char(s2, '\0');
 	full_s = malloc(len_s1 + len_s2 + 1);
 	if (full_s == NULL)
+	{
+		free((char *)s1);
 		return (full_s);
+	}
 	ft_strlcpy(full_s, s1, len_s1 + 1);
 	ft_strlcpy(full_s + len_s1, s2, len_s2 + 1);
-	s1 = NULL;
 	free((char *)s1);
 	return (full_s);
 }
