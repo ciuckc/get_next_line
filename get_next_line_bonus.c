@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   get_next_line.c                                    :+:    :+:            */
+/*   get_next_line_bonus.c                              :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: scristia <scristia@student.codam.nl>         +#+                     */
+/*   By: scristia <scristia@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/13 18:39:40 by scristia      #+#    #+#                 */
-/*   Updated: 2022/02/07 12:52:20 by scristia      ########   odam.nl         */
+/*   Created: 2022/02/07 12:57:53 by scristia      #+#    #+#                 */
+/*   Updated: 2022/02/07 13:31:43 by scristia      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static char	*read_line(int fd, char *store_line)
 {
@@ -78,14 +78,14 @@ static char	*get_line(char **store_line)
 
 char	*get_next_line(int fd)
 {
-	static char		*store_line;
+	static char		*store_line[OPEN_MAX];
 	char			*line;
 
-	if (fd < 0 || BUFFER_SIZE < 1)
+	if (fd < 0 || BUFFER_SIZE < 1 || fd > OPEN_MAX)
 		return (NULL);
-	store_line = read_line(fd, store_line);
-	if (!store_line)
+	store_line[fd] = read_line(fd, store_line[fd]);
+	if (!store_line[fd])
 		return (NULL);
-	line = get_line(&store_line);
+	line = get_line(&store_line[fd]);
 	return (line);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   get_next_line.h                                    :+:    :+:            */
+/*   get_next_line_bonus.h                              :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: scristia <scristia@student.codam.nl>         +#+                     */
+/*   By: scristia <scristia@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/13 18:44:51 by scristia      #+#    #+#                 */
-/*   Updated: 2022/02/07 12:52:13 by scristia      ########   odam.nl         */
+/*   Created: 2022/02/07 12:59:43 by scristia      #+#    #+#                 */
+/*   Updated: 2022/02/07 13:31:56 by scristia      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <limits.h>
 
 char	*get_next_line(int fd);
 

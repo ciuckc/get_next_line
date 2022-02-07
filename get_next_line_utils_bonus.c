@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   get_next_line_utils.c                              :+:    :+:            */
+/*   get_next_line_utils_bonus.c                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: scristia <scristia@student.codam.nl>         +#+                     */
+/*   By: scristia <scristia@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/01/13 18:45:50 by scristia      #+#    #+#                 */
-/*   Updated: 2022/02/07 12:52:17 by scristia      ########   odam.nl         */
+/*   Created: 2022/02/07 12:58:31 by scristia      #+#    #+#                 */
+/*   Updated: 2022/02/07 13:31:41 by scristia      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_strchr(const char *s, int c)
 {
